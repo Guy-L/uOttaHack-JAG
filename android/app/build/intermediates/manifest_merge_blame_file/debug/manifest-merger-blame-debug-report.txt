@@ -1,0 +1,94 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.tensorflow.lite.examples.posenet"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+7-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:5:5-17
+8        android:minSdkVersion="21"
+8-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:5:5-17
+9        android:targetSdkVersion="23" />
+9-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:5:5-17
+10
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:7:5-65
+11-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:7:22-62
+12
+13    <uses-feature android:name="android.hardware.camera" />
+13-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:9:5-60
+13-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:9:19-57
+14    <uses-feature android:name="android.hardware.camera.autofocus" />
+14-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:10:5-70
+14-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:10:19-67
+15
+16    <application
+16-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:12:5-41:19
+17        android:allowBackup="true"
+17-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:13:9-35
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.1.0] C:\Users\Gui\.gradle\caches\transforms-2\files-2.1\e9d267c39890385adcadf7222b957ff3\core-1.1.0\AndroidManifest.xml:24:18-86
+19        android:debuggable="true"
+20        android:icon="@mipmap/ic_launcher"
+20-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:14:9-43
+21        android:label="@string/app_name"
+21-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:15:9-41
+22        android:roundIcon="@mipmap/ic_launcher_round"
+22-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:16:9-54
+23        android:supportsRtl="true"
+23-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:17:9-35
+24        android:testOnly="true"
+25        android:theme="@style/MaterialTheme" >
+25-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:18:9-45
+26        <activity
+26-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:20:9-30:20
+27            android:name="org.tensorflow.lite.examples.posenet.MainActivity"
+27-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:21:13-41
+28            android:label="@string/title_activity_main"
+28-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:22:13-56
+29            android:theme="@style/MaterialTheme.NoActionBar" >
+29-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:23:13-61
+30            <intent-filter>
+30-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:24:13-29:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:25:17-69
+31-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:25:25-66
+32                <action android:name="android.intent.action.VIEW" />
+32-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:26:17-69
+32-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:26:25-66
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:28:17-77
+34-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:28:27-74
+35            </intent-filter>
+36        </activity>
+37        <activity
+37-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:32:9-36:20
+38            android:name="org.tensorflow.lite.examples.posenet.TestActivity"
+38-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:33:13-41
+39            android:exported="true"
+39-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:34:13-36
+40            android:label="@string/app_name" >
+40-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:35:13-45
+41        </activity>
+42        <activity
+42-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:37:9-40:20
+43            android:name="org.tensorflow.lite.examples.posenet.CameraActivity"
+43-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:38:13-43
+44            android:exported="true" >
+44-->C:\Users\Gui\AndroidStudioProjects\uOttaHackJAG\android\app\src\main\AndroidManifest.xml:39:13-36
+45        </activity>
+46
+47        <provider
+47-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Gui\.gradle\caches\transforms-2\files-2.1\3fd00f68b7078499abef931b810d4868\lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+48            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+48-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Gui\.gradle\caches\transforms-2\files-2.1\3fd00f68b7078499abef931b810d4868\lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+49            android:authorities="org.tensorflow.lite.examples.posenet.lifecycle-process"
+49-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Gui\.gradle\caches\transforms-2\files-2.1\3fd00f68b7078499abef931b810d4868\lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+50            android:exported="false"
+50-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Gui\.gradle\caches\transforms-2\files-2.1\3fd00f68b7078499abef931b810d4868\lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+51            android:multiprocess="true" />
+51-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Gui\.gradle\caches\transforms-2\files-2.1\3fd00f68b7078499abef931b810d4868\lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+52    </application>
+53
+54</manifest>
