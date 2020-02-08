@@ -110,7 +110,7 @@
   </defs>
   <title>body-trace</title>
   <g id="reference">
-    <image width="512" height="512" transform="translate(117.5) scale(1.61)" xlink:href="human.png"/>
+    <image width="512" height="512" transform="translate(117.5) scale(1.61)" xlink:href="http://localhost:3000/human.png"/>
   </g>
   <g id="Layer_2" data-name="Layer 2">
     <line id="top-left-display-bar" x1="302" y1="52.5" y2="52.5" fill="none" stroke="#000" stroke-miterlimit="10"/>
