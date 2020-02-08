@@ -1,3 +1,3 @@
 # Coolest Project :sunglasses:
 
-[X] Produce data json for the DB
+[x] Produce data json for the DB
