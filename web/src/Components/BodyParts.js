@@ -41,7 +41,6 @@ class BodyParts extends React.Component {
                     display_bar_regex += is_right.test(item.id) ? 'right.*' : 'left.*'
                     let regex = RegExp(display_bar_regex)
                     let display_bar = undefined
-                    
                     node.querySelectorAll('g').forEach(line=>{
                         if (regex.test(line.id)) {
                             display_bar = line
