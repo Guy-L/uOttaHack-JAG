@@ -57,6 +57,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
+import org.json.JSONArray
 import java.util.concurrent.Semaphore
 import java.util.concurrent.TimeUnit
 import kotlin.math.abs
@@ -67,6 +68,11 @@ import org.tensorflow.lite.examples.posenet.lib.Posenet
 class PosenetActivity :
   Fragment(),
   ActivityCompat.OnRequestPermissionsResultCallback {
+
+
+  init{
+
+  }
 
   /** List of body joints that should be connected.    */
   private val bodyJoints = listOf(
@@ -156,6 +162,8 @@ class PosenetActivity :
 
   /** Abstract interface to someone holding a display surface.    */
   private var surfaceHolder: SurfaceHolder? = null
+
+  private var mainTable: JSONArray? = null;
 
   /** [CameraDevice.StateCallback] is called when [CameraDevice] changes its state.   */
   private val stateCallback = object : CameraDevice.StateCallback() {
@@ -442,10 +450,10 @@ class PosenetActivity :
       )
       image.close()
 
-      // Process an image for analysis in every 3 frames.
-      frameCounter = (frameCounter + 1) % 3
-      if (frameCounter == 0) {
+      frameCounter++;
+      if(frameCounter % 3 == 0) {
         processImage(rotatedBitmap)
+
       }
     }
   }
@@ -529,7 +537,7 @@ class PosenetActivity :
     val widthRatio = screenWidth.toFloat() / MODEL_WIDTH
     val heightRatio = screenHeight.toFloat() / MODEL_HEIGHT
 
-    // Draw key points over the image.
+    //Draw key points over the image.
     for (keyPoint in person.keyPoints) {
       if (keyPoint.score > minConfidence) {
         val position = keyPoint.position
@@ -538,7 +546,7 @@ class PosenetActivity :
         canvas.drawCircle(adjustedX, adjustedY, circleRadius, paint)
       }
     }
-
+//
     for (line in bodyJoints) {
       if (
         (person.keyPoints[line.first.ordinal].score > minConfidence) and
@@ -553,25 +561,7 @@ class PosenetActivity :
         )
       }
     }
-
-    canvas.drawText(
-      "Score: %.2f".format(person.score),
-      (15.0f * widthRatio),
-      (30.0f * heightRatio + bottom),
-      paint
-    )
-    canvas.drawText(
-      "Device: %s".format(posenet.device),
-      (15.0f * widthRatio),
-      (50.0f * heightRatio + bottom),
-      paint
-    )
-    canvas.drawText(
-      "Time: %.2f ms".format(posenet.lastInferenceTimeNanos * 1.0f / 1_000_000),
-      (15.0f * widthRatio),
-      (70.0f * heightRatio + bottom),
-      paint
-    )
+//
 
     // Draw!
     surfaceHolder!!.unlockCanvasAndPost(canvas)
@@ -586,6 +576,8 @@ class PosenetActivity :
     val scaledBitmap = Bitmap.createScaledBitmap(croppedBitmap, MODEL_WIDTH, MODEL_HEIGHT, true)
 
     // Perform inference.
+    Log.v("DEBUG", frameCounter.toString())
+
     val person = posenet.estimateSinglePose(scaledBitmap)
     val canvas: Canvas = surfaceHolder!!.lockCanvas()
     draw(canvas, person, scaledBitmap)
@@ -602,6 +594,7 @@ class PosenetActivity :
         previewSize!!.width, previewSize!!.height, ImageFormat.YUV_420_888, 2
       )
       imageReader!!.setOnImageAvailableListener(imageAvailableListener, backgroundHandler)
+      mainTable = JSONArray();
 
       // This is the surface we need to record images for processing.
       val recordingSurface = imageReader!!.surface

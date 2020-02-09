@@ -3,31 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_browse">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="org.tensorflow.lite.examples.posenet.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_browse"
+        android:name="org.tensorflow.lite.examples.posenet.ui.browse.BrowseFragment"
+        android:label="@string/menu_browse"
+        tools:layout="@layout/fragment_browse" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="org.tensorflow.lite.examples.posenet.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="org.tensorflow.lite.examples.posenet.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
-        android:id="@+id/nav_tools"
-        android:name="org.tensorflow.lite.examples.posenet.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        android:id="@+id/nav_tutors"
+        android:name="org.tensorflow.lite.examples.posenet.ui.tutors.TutorsFragment"
+        android:label="@string/menu_tutors"
+        tools:layout="@layout/fragment_tutors" />
 
     <fragment
         android:id="@+id/nav_share"
@@ -37,7 +25,7 @@
 
     <fragment
         android:id="@+id/nav_send"
-        android:name="org.tensorflow.lite.examples.posenet.ui.send.SendFragment"
+        android:name="org.tensorflow.lite.examples.posenet.ui.feedback.SendFragment"
         android:label="@string/menu_send"
-        tools:layout="@layout/fragment_send" />
+        tools:layout="@layout/fragment_feedback" />
 </navigation>
