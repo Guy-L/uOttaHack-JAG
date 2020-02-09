@@ -4,6 +4,7 @@ import GlobalStyles from "../Styles/GlobalStyles";
 import Theme from "../Styles/Theme";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Form, FormControl, Button} from 'react-bootstrap';
+import {ReactComponent as BodySvg} from '../Assets/body-part.svg'
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -25,5 +26,8 @@ export default ()=> (
     </Navbar>
     <br/>
 
+    <body>
+      <BodySvg/>
+    </body>
   </ThemeProvider>
 );
