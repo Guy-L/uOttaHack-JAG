@@ -51,13 +51,14 @@ class BodyParts extends React.Component {
                     item.querySelector('circle').addEventListener('mouseout', ()=>{
                         item.style.opacity = '0'
                         display_bar.style.opacity = '0'
-                        display_bar.querySelector('text').innerHTML = 'Hello World'
                     })
 
                     // 
                     item.querySelector('circle').addEventListener('mouseover', ()=>{
+                        console.log(item.id)
                         item.style.opacity = '1'
                         display_bar.style.opacity = '1'
+                        display_bar.querySelector('text').innerHTML = item.id.replace("-", " ").toUpperCase();
                     })
                 } catch {}
             }

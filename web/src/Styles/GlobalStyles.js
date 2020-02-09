@@ -13,7 +13,7 @@ export default createGlobalStyle`
         font-size:14px;
         margin:auto;
         padding: auto;
-        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Courier, monospace, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 
     a {
