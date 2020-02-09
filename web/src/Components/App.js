@@ -10,7 +10,7 @@ import RadarGraph from "./RadarGraph";
 import JagtLogo from '../Assets/JAGTMove.ico'
 import JagtText from '../Assets/jactmovetext.PNG'
 import SearchBar from './SearchBar';
-
+import PoseScore from "../Services/PoseScore"
 const Wrapper = styled.div`
   margin: 0 auto;
   max-width: 935px;
@@ -46,25 +46,21 @@ export default ()=> (
               <Row>
                 <Col className="px-5 mt-5">
                   <ButtonGroup>
-                    <ButtonToggle color="secondary">Past History</ButtonToggle>  
-                    <ButtonToggle color="secondary">Edit Routine</ButtonToggle>
-                    <ButtonToggle color="danger">Patient Contact</ButtonToggle>   
+                      <ButtonToggle color="secondary">Past History</ButtonToggle>  
+                      <ButtonToggle color="secondary">Edit Routine</ButtonToggle>
+                      <ButtonToggle color="danger">Patient Contact</ButtonToggle>   
+                    <ButtonToggle class = "px-5" color="info">Patient Database</ButtonToggle>
                   </ButtonGroup>
                 </Col>
               </Row>   
               <Row>
-                <Col className="px-5 mt-2">
+                <Col className="mt-2">
                 </Col>
               </Row>  
               <Row>
                 <Col className="px-5 mt-2">
                 </Col>
               </Row>  
-              <Row>
-                <Col className="p-5 mt-2">
-                  <ButtonToggle color="info">Patient Database</ButtonToggle>
-                </Col>
-              </Row> 
               <Row>
                 <Col className="px-5 mt-2">
                   <SearchBar/>
@@ -72,5 +68,6 @@ export default ()=> (
               </Row>
             </Col>
         </Row>
+        <PoseScore/>
   </ThemeProvider>
 );

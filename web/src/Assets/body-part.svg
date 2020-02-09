@@ -166,7 +166,7 @@
   </g>
   <g id="Layer_2" data-name="Layer 2">
     <g id="top-right-display-bar">
-      <text transform="translate(926.92 43.59)" font-size="23" font-family="MyriadPro-Regular, Myriad Pro"><tspan letter-spacing="-0.01em">L</tspan><tspan x="10.53" y="0">o</tspan><tspan x="23.16" y="0" letter-spacing="-0.01em">r</tspan><tspan x="30.45" y="0">em ipsum</tspan></text>
+      <text transform="translate(766.92 43.59)" font-size="23" font-family="Lucida Sans Unicode, Lucida Grande, sans-serif"><tspan letter-spacing="-0.01em">L</tspan><tspan x="10.53" y="0">o</tspan><tspan x="23.16" y="0" letter-spacing="-0.01em">r</tspan><tspan x="30.45" y="0">em ipsum</tspan></text>
       <line id="top-right-display-bar-2" data-name="top-right-display-bar" x1="755.5" y1="52.5" x2="1057.5" y2="52.5" fill="none" stroke="#000" stroke-miterlimit="10"/>
     </g>
     <g id="nose">
@@ -198,6 +198,7 @@
         <circle id="left-hip-2" data-name="left-hip" cx="490" cy="412.5" r="47.5" fill="red" stroke="#000" stroke-miterlimit="10"/>
       </g>
       <line x1="449.22" y1="436.87" x2="301.5" y2="650" stroke="#000" stroke-miterlimit="10"/>
+
     </g>
     <g id="left-knee">
       <g mask="url(#mask-6)">
@@ -212,7 +213,7 @@
       <line x1="301.5" y1="650" x2="434.5" y2="725.67" stroke="#000" stroke-miterlimit="10"/>
     </g>
     <g id="bottom-right-display-bar">
-      <text transform="translate(926.92 639.59)" font-size="23" font-family="MyriadPro-Regular, Myriad Pro"><tspan letter-spacing="-0.01em">L</tspan><tspan x="10.53" y="0">o</tspan><tspan x="23.16" y="0" letter-spacing="-0.01em">r</tspan><tspan x="30.45" y="0">em ipsum</tspan></text>
+      <text transform="translate(826.92 639.59)" font-size="23" font-family="Lucida Sans Unicode, Lucida Grande, sans-serif"><tspan letter-spacing="-0.01em">L</tspan><tspan x="10.53" y="0">o</tspan><tspan x="23.16" y="0" letter-spacing="-0.01em">r</tspan><tspan x="30.45" y="0">em ipsum</tspan></text>
       <line id="bottom-right-display-bar-2" data-name="bottom-right-display-bar" x1="1057.5" y1="650.5" x2="755.5" y2="650.5" fill="none" stroke="#000" stroke-miterlimit="10"/>
     </g>
     <g id="right-shoulder">
@@ -253,11 +254,11 @@
     </g>
     <g id="top-left-display-bar">
       <line id="top-left-display-bar-2" data-name="top-left-display-bar" x1="302" y1="52.5" y2="52.5" fill="none" stroke="#000" stroke-miterlimit="10"/>
-      <text transform="translate(11.92 43.3)" font-size="23" font-family="MyriadPro-Regular, Myriad Pro"><tspan letter-spacing="-0.01em">L</tspan><tspan x="10.53" y="0">o</tspan><tspan x="23.16" y="0" letter-spacing="-0.01em">r</tspan><tspan x="30.45" y="0">em ipsum</tspan></text>
+      <text transform="translate(11.92 43.3)" font-size="23" font-family="Lucida Sans Unicode, Lucida Grande, sans-serif"><tspan letter-spacing="-0.01em">L</tspan><tspan x="10.53" y="0">o</tspan><tspan x="23.16" y="0" letter-spacing="-0.01em">r</tspan><tspan x="30.45" y="0">em ipsum</tspan></text>
     </g>
     <g id="bottom-left-display-bar">
       <line id="bottom-left-display-bar-2" data-name="bottom-left-display-bar" y1="650.5" x2="302" y2="650.5" fill="none" stroke="#000" stroke-miterlimit="10"/>
-      <text transform="translate(11.92 639.59)" font-size="23" font-family="MyriadPro-Regular, Myriad Pro"><tspan letter-spacing="-0.01em">L</tspan><tspan x="10.53" y="0">o</tspan><tspan x="23.16" y="0" letter-spacing="-0.01em">r</tspan><tspan x="30.45" y="0">em ipsum</tspan></text>
+      <text transform="translate(11.92 639.59)" font-size="23" font-family="Lucida Sans Unicode, Lucida Grande, sans-serif"><tspan letter-spacing="-0.01em">L</tspan><tspan x="10.53" y="0">o</tspan><tspan x="23.16" y="0" letter-spacing="-0.01em">r</tspan><tspan x="30.45" y="0">em ipsum</tspan></text>
     </g>
   </g>
 </svg>
