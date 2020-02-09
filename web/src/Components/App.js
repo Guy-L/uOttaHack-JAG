@@ -39,7 +39,7 @@ export default ()=> (
               </CardBody>
             </Col>
             <Col xs={4}>
-              <Row fullHeight>
+              <Row>
                 <RadarGraph/>
               </Row>
             

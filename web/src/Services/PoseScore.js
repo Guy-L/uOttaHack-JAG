@@ -23,8 +23,9 @@ export default class PoseScore extends React.Component {
         .then(res => {
           const dataJson = res['data'];
           const recentData = dataJson[dataJson.length-1].result;
+          const pastData = dataJson[dataJson.length-2].result;
           localStorage.setItem('data', JSON.stringify(recentData));
-          console.log("hey");
+          localStorage.setItem('pastData', JSON.stringify(pastData));
         })
         .catch(error => {
           console.log(error)

@@ -1,9 +1,10 @@
 import {Radar} from 'react-chartjs-2';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Jumbotron} from 'reactstrap';
 
 const data = {
-    labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
+    labels: ['Head', 'Shoulders', 'Elbows', 'Wrists', 'Hip', 'Knees', 'Ankles'],
     datasets: [
       {
         label: 'Previous Pose Score',
@@ -28,9 +29,93 @@ const data = {
     ]
 };
 
+const currentScore = JSON.parse(localStorage.getItem("data"));
+const pastScore = JSON.parse(localStorage.getItem("pastData"));
+console.log('currentScore', currentScore);
+
 class RadarGraph extends React.Component {
+    calculateScores() {
+        const currentRet = {'head':null,
+    'shoulder':null,
+    'elbow': null,
+    'wrist': null,
+    'hip': null,
+    'knee': null,
+    'ankle': null};
+    const pastRet = {'head':null,
+    'shoulder':null,
+    'elbow': null,
+    'wrist': null,
+    'hip': null,
+    'knee': null,
+    'ankle': null};
+
+        Object.keys(currentScore).forEach(k=> {
+            if (k.endsWith("SHOULDER")){
+                currentRet["shoulder"] = ( currentRet["shoulder"]=== null || currentRet["shoulder"] > currentScore[k] ) ? currentScore[k] : currentRet["shoulder"];
+                return;
+            } else if (k.endsWith("ELBOW")) {
+                currentRet["elbow"] = ( currentRet["elbow"]=== null || currentRet["elbow"] > currentScore[k]) ? currentScore[k] : currentRet["elbow"];
+                return;
+            } else if (k.endsWith("WRIST")){
+                let tmp = "wrist";
+                currentRet[tmp] = ( currentRet[tmp]=== null || currentRet[tmp] > currentScore[k]) ? currentScore[k] : currentRet[tmp];
+                return;
+            } else if(k.endsWith("HIP")){
+                let tmp = "hip";
+                currentRet[tmp] = ( currentRet[tmp]=== null || currentRet[tmp] > currentScore[k]) ? currentScore[k] : currentRet[tmp];
+                return;
+            } else if(k.endsWith("KNEE")){
+                let tmp = "knee";
+                currentRet[tmp] = ( currentRet[tmp]=== null || currentRet[tmp] > currentScore[k]) ? currentScore[k] : currentRet[tmp];
+                return;
+            } else if(k.endsWith("ANKLE")) {
+                let tmp = "ankle";
+                currentRet[tmp] = ( currentRet[tmp]=== null || currentRet[tmp] > currentScore[k]) ? currentScore[k] : currentRet[tmp];
+                return;
+            }
+        });
+        
+        Object.keys(pastScore).forEach(k=> {
+            if (k.endsWith("SHOULDER")){
+                pastRet["shoulder"] = ( pastRet["shoulder"]=== null || pastRet["shoulder"] > pastScore[k]) ? pastScore[k] : pastRet["shoulder"];
+                return;
+            } else if (k.endsWith("ELBOW")) {
+                pastRet["elbow"] = ( pastRet["elbow"]=== null || pastRet["elbow"] > pastScore[k]) ? pastScore[k] : pastRet["elbow"];
+                return;
+            } else if (k.endsWith("WRIST")){
+                let tmp = "wrist";
+                pastRet[tmp] = ( pastRet[tmp]=== null || pastRet[tmp] > pastScore[k]) ? pastScore[k] : pastRet[tmp];
+                return;
+            } else if(k.endsWith("HIP")){
+                let tmp = "hip";
+                pastRet[tmp] = ( pastRet[tmp]=== null || pastRet[tmp] > pastScore[k]) ? pastScore[k] : pastRet[tmp];
+                return;
+            } else if(k.endsWith("KNEE")){
+                let tmp = "knee";
+                pastRet[tmp] = ( pastRet[tmp]=== null || pastRet[tmp] > pastScore[k]) ? pastScore[k] : pastRet[tmp];
+                return;
+            } else if(k.endsWith("ANKLE")) {
+                let tmp = "ankle";
+                pastRet[tmp] = ( pastRet[tmp]=== null || pastRet[tmp] > pastScore[k]) ? pastScore[k] : pastRet[tmp];
+                return;
+            }
+        }  );  
+        
+        data.datasets[0]["data"] = Object.values(pastRet);
+        data.datasets[1]["data"] = Object.values(currentRet);
+    }
+
     render() {
-        return (<Radar data={data} padding={10} id="summary"></Radar>)
+        //this.calculateScores();
+        return (
+            <div>
+                <Radar data={data} padding={20} id="summary"/>                
+                <Jumbotron>  
+                    * For succinct summary, if we collected two different points to produce one score, we used the worst score as the indication
+                </Jumbotron>
+            </div>
+        )
     }
 }
 
