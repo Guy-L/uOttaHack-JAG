@@ -15,6 +15,7 @@ class BodyParts extends React.Component {
             if (is_display_bar.test(item.id)) item.style.opacity = '0' 
         }) 
 
+
         node.querySelectorAll('g').forEach(item=>{
             if (is_bodypart.test(item.id)) {
                 item.style.opacity = '0'  
@@ -29,7 +30,7 @@ class BodyParts extends React.Component {
         else { ret = 1-(error/60) }
         console.log("SCORE IS GOT", error)
 
-        return ret;
+        return (ret*100).toFixed(4);
     }
 
     componentDidMount(){
@@ -80,14 +81,28 @@ class BodyParts extends React.Component {
                     item.querySelector('circle').addEventListener('mouseover', ()=>{
                         console.log(item.id)
                         console.log(item)
-                        const x =window.scrollX +item.querySelector('g').querySelector('circle').getBoundingClientRect().left
-                        const y =window.scrollX +item.querySelector('g').querySelector('circle').getBoundingClientRect().top
-                        console.log("("+x+" "+y+")" )
+                        let svg = document.querySelector('svg')
+                        let x = document.querySelector('svg').getBoundingClientRect().right;
+                        let y = document.querySelector('svg').getBoundingClientRect().top
+                        let pt = svg.createSVGPoint();
+                        let ctm = item.getCTM()
+                        // console.log point.matrixTransform(ctm)
+                        // pt.x = window.scrollX +item.querySelector('g').querySelector('circle').getBoundingClientRect().left
+                        // pt.y = window.scrollX +item.querySelector('g').querySelector('circle').getBoundingClientRect().top
+                        // let coords = pt.matrixTransform(ctm)
+                        // let el = document.createElement('div')
+                        // el.classList.add('pounding-circle')
+                        // el.style.position = 'absolute'
+                        // el.style.top = coords.x
+                        // el.style.left = coords.y
+                        console.log('coords',  pt.matrixTransform(item.getCTM().inverse()))
+                        // document.querySelector('body').appendChild(el)
+
                         //document.body.innerHTML += `<div class="container"><div class="poundingCircle" style="position:absolute;z-index:100; left: ${x}; top: ${y}">sldfkjsdlkfj</div></div>`
                         item.style.opacity = '1';
                         display_bar.style.opacity = '1';
                         display_bar.querySelector('text').innerHTML = item.id.replace("-", " ").toUpperCase();
-                        display_bar.querySelector('text').innerHTML +=`  ❤️ ${score}`;
+                        display_bar.querySelector('text').innerHTML +=`  ❤️ ${score === "N/A" ? score : score+"%" }`;
                     })
                     
                 } catch {}
