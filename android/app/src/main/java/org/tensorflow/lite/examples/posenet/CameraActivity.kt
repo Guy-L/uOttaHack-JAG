@@ -18,9 +18,9 @@ package org.tensorflow.lite.examples.posenet
 
 import android.net.Uri
 import android.os.Bundle
-import android.widget.MediaController
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
+import java.time.LocalDateTime
 
 class CameraActivity : AppCompatActivity() {
 

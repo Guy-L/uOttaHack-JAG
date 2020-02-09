@@ -257,7 +257,7 @@ class Posenet(
         ).toInt()
       confidenceScores[idx] = sigmoid(heatmaps[0][positionY][positionX][idx])
 
-      
+
     }
 
     val person = Person()
