@@ -16,7 +16,10 @@
 
 package org.tensorflow.lite.examples.posenet
 
+import android.net.Uri
 import android.os.Bundle
+import android.widget.MediaController
+import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
 
 class CameraActivity : AppCompatActivity() {
@@ -24,6 +27,12 @@ class CameraActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_camera)
+
+    var videoView = findViewById(R.id.video) as VideoView
+    videoView.setVideoURI(Uri.parse("android.resource://" + packageName +"/"+R.raw.jellyfish))
+    videoView.requestFocus()
+    videoView.start()
+
     savedInstanceState ?: supportFragmentManager.beginTransaction()
       .replace(R.id.container, PosenetActivity())
       .commit()

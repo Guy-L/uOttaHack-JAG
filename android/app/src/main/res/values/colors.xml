@@ -15,9 +15,10 @@
 -->
 
 <resources>
-  <color name="colorPrimary">#ffa800</color>
-  <color name="colorPrimaryDark">#ff6f00</color>
+  <color name="colorPrimary">#FF0000</color>
+  <color name="colorPrimaryDark">#FF0000</color>
   <color name="colorAccent">#425066</color>
   <color name="control_background">#cc4285f4</color>
   <color name="semi_transparent">#66000000</color>
+  <color name="text">#66FFFFFF</color>
 </resources>

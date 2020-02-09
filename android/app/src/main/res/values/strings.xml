@@ -14,7 +14,7 @@
  limitations under the License.
 -->
 <resources>
-    <string name="app_name" translation_description="Posenet demo app built with Posenet library [CHAR_LIMIT=40]">TFL Posenet</string>
+    <string name="app_name" translation_description="Posenet demo app built with Posenet library [CHAR_LIMIT=40]">JAGTMove</string>
     <string name="picture" translation_description="Picture [CHAR_LIMIT=40]">Picture</string>
     <string name="description_info" translation_description="Description information [CHAR_LIMIT=40]">Info</string>
     <string name="request_permission" translation_description="Request camera permission [CHAR_LIMIT=40]">This app needs camera permission.</string>
@@ -28,15 +28,15 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">JAGTMove</string>
+    <string name="nav_header_subtitle">Time to get JAGT!</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
+    <string name="menu_browse">Browse</string>
+    <string name="menu_tutors">Your Tutors</string>
     <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
+    <string name="menu_send">Feedback</string>
+    <string name="tutor_name">Saved Tutor</string>
+    <string name="tutor_desc">\n\nHere\'s a few of my favorite exercises.\n\n\n\n</string>
 </resources>

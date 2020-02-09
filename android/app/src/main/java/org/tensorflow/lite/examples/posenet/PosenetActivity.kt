@@ -529,7 +529,7 @@ class PosenetActivity :
     val widthRatio = screenWidth.toFloat() / MODEL_WIDTH
     val heightRatio = screenHeight.toFloat() / MODEL_HEIGHT
 
-    // Draw key points over the image.
+    //Draw key points over the image.
     for (keyPoint in person.keyPoints) {
       if (keyPoint.score > minConfidence) {
         val position = keyPoint.position
@@ -538,7 +538,7 @@ class PosenetActivity :
         canvas.drawCircle(adjustedX, adjustedY, circleRadius, paint)
       }
     }
-
+//
     for (line in bodyJoints) {
       if (
         (person.keyPoints[line.first.ordinal].score > minConfidence) and
@@ -553,25 +553,7 @@ class PosenetActivity :
         )
       }
     }
-
-    canvas.drawText(
-      "Score: %.2f".format(person.score),
-      (15.0f * widthRatio),
-      (30.0f * heightRatio + bottom),
-      paint
-    )
-    canvas.drawText(
-      "Device: %s".format(posenet.device),
-      (15.0f * widthRatio),
-      (50.0f * heightRatio + bottom),
-      paint
-    )
-    canvas.drawText(
-      "Time: %.2f ms".format(posenet.lastInferenceTimeNanos * 1.0f / 1_000_000),
-      (15.0f * widthRatio),
-      (70.0f * heightRatio + bottom),
-      paint
-    )
+//
 
     // Draw!
     surfaceHolder!!.unlockCanvasAndPost(canvas)
