@@ -34,7 +34,7 @@ public class BrowseListAdapter extends RecyclerView.Adapter<BrowseListAdapter.My
                                                              int viewType) {
         // create a new view
         TextView v = (TextView) LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_view, parent, false);
+                .inflate(R.layout.tutor_view, parent, false);
         v.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {

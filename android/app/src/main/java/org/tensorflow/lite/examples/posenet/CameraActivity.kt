@@ -16,12 +16,14 @@
 
 package org.tensorflow.lite.examples.posenet
 
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
 import org.json.JSONObject
+import java.io.*
 import java.util.*
 
 class CameraActivity : AppCompatActivity() {
@@ -32,7 +34,7 @@ class CameraActivity : AppCompatActivity() {
     setContentView(R.layout.activity_camera)
 
     var videoView = findViewById(R.id.video) as VideoView
-    videoView.setVideoURI(Uri.parse("android.resource://" + packageName +"/"+R.raw.jellyfish))
+    videoView.setVideoURI(Uri.parse("android.resource://" + packageName +"/"+R.raw.ref_3))
     videoView.requestFocus()
     videoView.start()
 
@@ -41,8 +43,7 @@ class CameraActivity : AppCompatActivity() {
             override fun run() {
                 endTimer();
             }
-//        }, it.duration.toLong());
-        }, 2000);
+        }, it.duration.toLong())
     }
 
     poseNet = PosenetActivity()
@@ -53,16 +54,51 @@ class CameraActivity : AppCompatActivity() {
 
 
   private fun endTimer(){
-    val referenceData = resources.openRawResource(R.raw.reference).bufferedReader().use { it.readText() }
-
     val sendData = JSONObject()
-    sendData.put("meta-data", JSONObject().put("name","video1"))
-    sendData.put("reference", "REPLACEME")
+    sendData.put("meta-data", JSONObject().put("name","video"+getVideoCount()))
     sendData.put("patient", poseNet.getJSON())
 
     val intent = Intent(this, ResultsActivity::class.java).apply {
-      putExtra("JSON", sendData.toString(2).replace("\"REPLACEME\"", referenceData))
+      putExtra("JSON", sendData.toString(2))
     }
     startActivity(intent)
+  }
+
+  private fun getVideoCount(): Int{
+    val curVidCount = readInternalStorage("store.txt")
+    writeInternalStorage("store.txt",(curVidCount+1).toString())
+
+    return curVidCount;
+  }
+
+  private fun readInternalStorage(filename: String) : Int{
+    var fileInputStream: FileInputStream? = null
+
+    try {
+      fileInputStream = openFileInput(filename)
+      var inputStreamReader: InputStreamReader = InputStreamReader(fileInputStream)
+      val bufferedReader: BufferedReader = BufferedReader(inputStreamReader)
+      val stringBuilder: StringBuilder = StringBuilder()
+      var text: String? = null
+      while ({ text = bufferedReader.readLine(); text }() != null) {
+        stringBuilder.append(text)
+      }
+
+      return stringBuilder.toString().toInt()
+    } catch (e: FileNotFoundException){
+
+      writeInternalStorage(filename, "0")
+      return 0
+    }
+  }
+
+  private fun writeInternalStorage(file: String, data: String){
+    val fileOutputStream: FileOutputStream
+    try {
+      fileOutputStream = openFileOutput(file, Context.MODE_PRIVATE)
+      fileOutputStream.write(data.toByteArray())
+    }catch (e: Exception){
+      e.printStackTrace()
+    }
   }
 }

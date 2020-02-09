@@ -1,18 +1,13 @@
 package org.tensorflow.lite.examples.posenet;
 
 import android.os.Bundle;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.view.View;
-
-import org.tensorflow.lite.examples.posenet.ui.browse.BrowseListAdapter;
 import org.tensorflow.lite.examples.posenet.ui.tutors.TutorListAdapter;
 
 public class TutorActivity extends AppCompatActivity {
@@ -47,7 +42,9 @@ public class TutorActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
         // specify an adapter (see also next example)
-        mAdapter = new TutorListAdapter(new String[]{"Workout 1", "Workout 2", "Workout 3", "Workout 4", "Workout 5", "Workout 6", "Workout 7", "Ultimate Workout"});
+        mAdapter = new TutorListAdapter(new String[]{"Warrior Pose", "Squats", "Push Ups", "Jumping Jacks", "More Workouts", "Workout 6", "Workout 7", "Ultimate Workout"},
+                                        new String[]{"Hold for 30s", "5reps, ×10", "5reps, ×10", "10reps, ×5", "More to come!", "More to come!", "More to come!", "The final frontier."},
+                                        new Integer[]{R.drawable.warrior, R.drawable.squats, R.drawable.pushup, R.drawable.jumping, R.drawable.question, R.drawable.question, R.drawable.question, R.drawable.exclamation});
         recyclerView.setAdapter(mAdapter);
     }
 }

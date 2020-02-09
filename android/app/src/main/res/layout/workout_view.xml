@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginBottom="2dp"
+    android:background="@drawable/side_nav_bar">
+
+    <TextView
+        android:id="@+id/workoutTitle"
+        android:layout_width="match_parent"
+        android:background="@drawable/side_nav_bar"
+        android:layout_height="wrap_content"
+        android:paddingTop="80dp"
+        android:paddingBottom="20dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="end"
+        android:paddingEnd="20dp"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:text="TEST"
+        android:textColor="@color/textMain"/>
+
+    <TextView
+        android:id="@+id/workoutSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="110dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="end"
+        android:paddingEnd="20dp"
+        android:textSize="15sp"
+        android:text="test"
+        android:textColor="@color/text"/>
+
+    <ImageView
+        android:id="@+id/workoutImage"
+        android:paddingTop="20dp"
+        android:paddingStart="20dp"
+        android:layout_width="90dp"
+        android:layout_height="110dp"
+        android:gravity="center"
+        android:alpha=".5"/>
+</RelativeLayout>

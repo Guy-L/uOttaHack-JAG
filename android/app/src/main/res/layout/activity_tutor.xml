@@ -11,7 +11,7 @@
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/app_bar_height"
-        android:background="@drawable/side_nav_bar"
+        android:background="@drawable/side_nav_bar_centered"
         android:fitsSystemWindows="true"
         android:theme="@style/MaterialTheme.AppBarOverlay">
 
@@ -20,7 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fitsSystemWindows="true"
-            app:contentScrim="@drawable/side_nav_bar"
+            app:contentScrim="@drawable/side_nav_bar_centered"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:toolbarId="@+id/toolbar">
 

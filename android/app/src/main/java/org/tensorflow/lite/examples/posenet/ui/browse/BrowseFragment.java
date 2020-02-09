@@ -46,7 +46,7 @@ public class BrowseFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
 
         // specify an adapter (see also next example)
-        mAdapter = new BrowseListAdapter(new String[]{"A Trained Medical Professional","Some Rando", "Some Other Rando", "Talented Dancer", "Untalented Dancer", "Guillaume Labasse"});
+        mAdapter = new BrowseListAdapter(new String[]{"A Trained Medical Professional","Some Rando", "Some Other Rando", "Talented Dancer", "Untalented Dancer", "Guillaume Labasse", "Andre Telfer", "Jeeheon K.", "Tejash P."});
         recyclerView.setAdapter(mAdapter);
 
         return root;

@@ -20,6 +20,12 @@
             android:layout_margin="@dimen/text_margin"
             android:text="@string/tutor_desc" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fadeout"
+            android:text="@string/space" />
+
         <androidx.recyclerview.widget.RecyclerView android:id="@+id/browse_list"
             android:scrollbars="vertical"
             android:layout_width="match_parent"
