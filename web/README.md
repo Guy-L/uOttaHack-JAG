@@ -3,6 +3,7 @@
 - [X] Call Post Request (Axios)
 - [X] Search bar and database button too far apart
 - [ ] Should plot numbers around the svg
+- [ ] calculate scores around the svg
 - [ ] animation for highlighting parts (circles pounding?)
 
 
