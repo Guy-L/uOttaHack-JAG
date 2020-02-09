@@ -16,13 +16,16 @@
 
 package org.tensorflow.lite.examples.posenet
 
+import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
-import java.time.LocalDateTime
+import org.json.JSONObject
+import java.util.*
 
 class CameraActivity : AppCompatActivity() {
+  private lateinit var poseNet: PosenetActivity
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -33,8 +36,33 @@ class CameraActivity : AppCompatActivity() {
     videoView.requestFocus()
     videoView.start()
 
+    videoView.setOnPreparedListener {
+        Timer().schedule(object : TimerTask() {
+            override fun run() {
+                endTimer();
+            }
+//        }, it.duration.toLong());
+        }, 2000);
+    }
+
+    poseNet = PosenetActivity()
     savedInstanceState ?: supportFragmentManager.beginTransaction()
-      .replace(R.id.container, PosenetActivity())
+      .replace(R.id.container, poseNet)
       .commit()
+  }
+
+
+  private fun endTimer(){
+    val referenceData = resources.openRawResource(R.raw.reference).bufferedReader().use { it.readText() }
+
+    val sendData = JSONObject()
+    sendData.put("meta-data", JSONObject().put("name","video1"))
+    sendData.put("reference", "REPLACEME")
+    sendData.put("patient", poseNet.getJSON())
+
+    val intent = Intent(this, ResultsActivity::class.java).apply {
+      putExtra("JSON", sendData.toString(2).replace("\"REPLACEME\"", referenceData))
+    }
+    startActivity(intent)
   }
 }

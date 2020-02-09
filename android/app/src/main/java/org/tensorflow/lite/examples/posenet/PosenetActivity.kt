@@ -58,21 +58,21 @@ import android.widget.Toast
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import org.json.JSONArray
+import org.json.JSONObject
 import java.util.concurrent.Semaphore
 import java.util.concurrent.TimeUnit
 import kotlin.math.abs
 import org.tensorflow.lite.examples.posenet.lib.BodyPart
 import org.tensorflow.lite.examples.posenet.lib.Person
 import org.tensorflow.lite.examples.posenet.lib.Posenet
+import java.util.*
+
 
 class PosenetActivity :
   Fragment(),
   ActivityCompat.OnRequestPermissionsResultCallback {
 
-
-  init{
-
-  }
+  private val startTime = System.currentTimeMillis();
 
   /** List of body joints that should be connected.    */
   private val bodyJoints = listOf(
@@ -163,7 +163,7 @@ class PosenetActivity :
   /** Abstract interface to someone holding a display surface.    */
   private var surfaceHolder: SurfaceHolder? = null
 
-  private var mainTable: JSONArray? = null;
+  private var mainTable: JSONArray = JSONArray()
 
   /** [CameraDevice.StateCallback] is called when [CameraDevice] changes its state.   */
   private val stateCallback = object : CameraDevice.StateCallback() {
@@ -450,12 +450,25 @@ class PosenetActivity :
       )
       image.close()
 
-      frameCounter++;
       if(frameCounter % 3 == 0) {
-        processImage(rotatedBitmap)
 
+        val frame = JSONObject()
+        frame.put("time", (System.currentTimeMillis() - startTime)/1000f)
+
+        val curPerson = processImage(rotatedBitmap)
+        curPerson.keyPoints.forEach{
+          frame.put(it.bodyPart.name, JSONObject("{x:"+it.position.x+", y:"+it.position.y+", confidence:"+it.score+"}"))
+        }
+
+        mainTable.put(frame)
       }
+
+      frameCounter++;
     }
+  }
+
+  public fun getJSON(): JSONArray{
+    return mainTable
   }
 
   /** Crop Bitmap to maintain aspect ratio of model input.   */
@@ -568,7 +581,7 @@ class PosenetActivity :
   }
 
   /** Process image using Posenet library.   */
-  private fun processImage(bitmap: Bitmap) {
+  private fun processImage(bitmap: Bitmap): Person{
     // Crop bitmap.
     val croppedBitmap = cropBitmap(bitmap)
 
@@ -576,11 +589,10 @@ class PosenetActivity :
     val scaledBitmap = Bitmap.createScaledBitmap(croppedBitmap, MODEL_WIDTH, MODEL_HEIGHT, true)
 
     // Perform inference.
-    Log.v("DEBUG", frameCounter.toString())
-
     val person = posenet.estimateSinglePose(scaledBitmap)
     val canvas: Canvas = surfaceHolder!!.lockCanvas()
     draw(canvas, person, scaledBitmap)
+    return person
   }
 
   /**
@@ -594,7 +606,6 @@ class PosenetActivity :
         previewSize!!.width, previewSize!!.height, ImageFormat.YUV_420_888, 2
       )
       imageReader!!.setOnImageAvailableListener(imageAvailableListener, backgroundHandler)
-      mainTable = JSONArray();
 
       // This is the surface we need to record images for processing.
       val recordingSurface = imageReader!!.surface
