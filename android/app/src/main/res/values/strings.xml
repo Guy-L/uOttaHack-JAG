@@ -37,7 +37,7 @@
     <string name="menu_tutors">Your Tutors</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Feedback</string>
-    <string name="tutor_name">Saved Tutor</string>
+    <string name="tutor_name">Dr. Mark Otto</string>
     <string name="tutor_desc">\n\nHere\'s a few of my favorite exercises.\n\n\n\n</string>
     <string name="space"> </string>
 </resources>
