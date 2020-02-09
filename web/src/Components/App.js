@@ -3,11 +3,11 @@ import GlobalStyles from "../Styles/GlobalStyles";
 import Theme from "../Styles/Theme";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Form, FormControl, Button} from 'react-bootstrap';
-import {ReactComponent as BodySvg} from '../Assets/body-part.svg'
 import React, { useState, useRef, useEffect } from "react";
 import {Radar} from 'react-chartjs-2';
 import { Card,CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, CardHeader, Container, Row, Col } from 'reactstrap';
+import BodySvg from './BodyParts';
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -79,7 +79,7 @@ export default ()=> (
               <CardHeader>Natalie's Pose Score
               </CardHeader>
               <CardBody>
-                <BodyParts/>
+                <BodySvg/>
               </CardBody>
             </Col>
             <Col xs={4} id="bottom-right">
