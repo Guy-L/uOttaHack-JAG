@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {ReactComponent as BodySvg} from '../Assets/body-part.svg'
+import PoundingCircle from "./PoundingCircle"
 
-const ids=['nose', 'left-shoulder', 'right-shoulder', 'left-elbow', 'right-elbow', 'left-wrist', 'right-wrist', 'left-hip', 'right-hip', 'left-knee', 'right-knee', 'left-ankle', 'right-ankle' ]
 class BodyParts extends React.Component {
     hideAllParts() {
         const node = ReactDOM.findDOMNode(this);
@@ -20,6 +20,16 @@ class BodyParts extends React.Component {
                 item.style.opacity = '0'  
             }
         })
+    }
+
+    computeScore(error){
+        console.log("ERROR GOT", error)
+        let ret = 0;
+        if (60<= error) { ret = 0 }
+        else { ret = 1-(error/60) }
+        console.log("SCORE IS GOT", error)
+
+        return ret;
     }
 
     componentDidMount(){
@@ -44,8 +54,8 @@ class BodyParts extends React.Component {
                     let display_bar = undefined
 
                     let lsIdx = item.id.replace("-", "_").toUpperCase();
-                    let score = JSON.parse(localStorage.getItem("data"))[lsIdx];
-                    score = (score === null) ? 'N/A' : score;
+                    let MSE = JSON.parse(localStorage.getItem("data"))[lsIdx];
+                    let score = (MSE === null) ? 'N/A' : this.computeScore(MSE);
                     console.log(score);
                     node.querySelectorAll('g').forEach(line=>{
                         if (regex.test(line.id)) {
@@ -63,19 +73,22 @@ class BodyParts extends React.Component {
                     item.querySelector('circle').addEventListener('mouseout', ()=>{
                         item.style.opacity = '0'
                         display_bar.style.opacity = '0'
+                        console.log('mouseout',item);
                     })
 
                     // 
                     item.querySelector('circle').addEventListener('mouseover', ()=>{
                         console.log(item.id)
-                        item.style.opacity = '1'
-                        display_bar.style.opacity = '1'
+                        console.log(item)
+                        const x =window.scrollX +item.querySelector('g').querySelector('circle').getBoundingClientRect().left
+                        const y =window.scrollX +item.querySelector('g').querySelector('circle').getBoundingClientRect().top
+                        console.log("("+x+" "+y+")" )
+                        //document.body.innerHTML += `<div class="container"><div class="poundingCircle" style="position:absolute;z-index:100; left: ${x}; top: ${y}">sldfkjsdlkfj</div></div>`
+                        item.style.opacity = '1';
+                        display_bar.style.opacity = '1';
                         display_bar.querySelector('text').innerHTML = item.id.replace("-", " ").toUpperCase();
                         display_bar.querySelector('text').innerHTML +=`  ❤️ ${score}`;
                     })
-                    
-                    
-
                     
                 } catch {}
             }
@@ -89,4 +102,4 @@ class BodyParts extends React.Component {
     }
 }
 
-export default BodyParts
+export default BodyParts;

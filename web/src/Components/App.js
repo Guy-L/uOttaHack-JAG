@@ -1,4 +1,4 @@
-import styled,{ ThemeProvider } from "styled-components";
+import styled,{ ThemeProvider, createGlobalStyle } from "styled-components";
 import Theme from "../Styles/Theme";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Form, FormControl, Button} from 'react-bootstrap';
@@ -11,6 +11,9 @@ import JagtLogo from '../Assets/JAGTMove.ico'
 import JagtText from '../Assets/jactmovetext.PNG'
 import SearchBar from './SearchBar';
 import PoseScore from "../Services/PoseScore"
+import PoundingCircle from "./PoundingCircle"
+import GlobalStyles from "../Styles/GlobalStyles"
+
 const Wrapper = styled.div`
   margin: 0 auto;
   max-width: 935px;
@@ -19,7 +22,10 @@ const Wrapper = styled.div`
 
 export default ()=> (
   <ThemeProvider theme={Theme}>
-    <Navbar color="light" light id="navigation-bar">
+  <>
+    <GlobalStyles/>
+    <>
+    <Navbar color="light" id="navigation-bar">
       <Navbar.Brand href="#home" id="brand">
         <img src={JagtText} style={{width:400, padding:5, marginLeft:-25}} />
       </Navbar.Brand>
@@ -35,7 +41,7 @@ export default ()=> (
               <CardHeader>Natalie's Pose Score
               </CardHeader>
               <CardBody>
-                <BodySvg/>
+                <PoseScore/>
               </CardBody>
             </Col>
             <Col xs={4}>
@@ -68,6 +74,8 @@ export default ()=> (
               </Row>
             </Col>
         </Row>
-        <PoseScore/>
+        <PoundingCircle/>
+        </>
+        </>
   </ThemeProvider>
 );

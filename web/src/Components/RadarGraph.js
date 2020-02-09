@@ -34,7 +34,17 @@ const pastScore = JSON.parse(localStorage.getItem("pastData"));
 console.log('currentScore', currentScore);
 
 class RadarGraph extends React.Component {
-    calculateScores() {
+    computeScore(error){
+        console.log("ERROR GOT", error)
+        let ret = 0;
+        if (60<= error) { ret = 0 }
+        else { ret = 1-(error/60) }
+        console.log("SCORE IS GOT", error)
+
+        return ret;
+    }
+
+    componentDidMount() {
         const currentRet = {'head':null,
     'shoulder':null,
     'elbow': null,
@@ -52,58 +62,58 @@ class RadarGraph extends React.Component {
 
         Object.keys(currentScore).forEach(k=> {
             if (k.endsWith("SHOULDER")){
-                currentRet["shoulder"] = ( currentRet["shoulder"]=== null || currentRet["shoulder"] > currentScore[k] ) ? currentScore[k] : currentRet["shoulder"];
+                currentRet["shoulder"] = ( currentRet["shoulder"]=== null || currentRet["shoulder"] < currentScore[k] ) ? currentScore[k] : currentRet["shoulder"];
                 return;
             } else if (k.endsWith("ELBOW")) {
-                currentRet["elbow"] = ( currentRet["elbow"]=== null || currentRet["elbow"] > currentScore[k]) ? currentScore[k] : currentRet["elbow"];
+                currentRet["elbow"] = ( currentRet["elbow"]=== null || currentRet["elbow"] < currentScore[k]) ? currentScore[k] : currentRet["elbow"];
                 return;
             } else if (k.endsWith("WRIST")){
                 let tmp = "wrist";
-                currentRet[tmp] = ( currentRet[tmp]=== null || currentRet[tmp] > currentScore[k]) ? currentScore[k] : currentRet[tmp];
+                currentRet[tmp] = ( currentRet[tmp]=== null || currentRet[tmp] < currentScore[k]) ? currentScore[k] : currentRet[tmp];
                 return;
             } else if(k.endsWith("HIP")){
                 let tmp = "hip";
-                currentRet[tmp] = ( currentRet[tmp]=== null || currentRet[tmp] > currentScore[k]) ? currentScore[k] : currentRet[tmp];
+                currentRet[tmp] = ( currentRet[tmp]=== null || currentRet[tmp] < currentScore[k]) ? currentScore[k] : currentRet[tmp];
                 return;
             } else if(k.endsWith("KNEE")){
                 let tmp = "knee";
-                currentRet[tmp] = ( currentRet[tmp]=== null || currentRet[tmp] > currentScore[k]) ? currentScore[k] : currentRet[tmp];
+                currentRet[tmp] = ( currentRet[tmp]=== null || currentRet[tmp] < currentScore[k]) ? currentScore[k] : currentRet[tmp];
                 return;
             } else if(k.endsWith("ANKLE")) {
                 let tmp = "ankle";
-                currentRet[tmp] = ( currentRet[tmp]=== null || currentRet[tmp] > currentScore[k]) ? currentScore[k] : currentRet[tmp];
+                currentRet[tmp] = ( currentRet[tmp]=== null || currentRet[tmp] < currentScore[k]) ? currentScore[k] : currentRet[tmp];
                 return;
             }
         });
         
         Object.keys(pastScore).forEach(k=> {
             if (k.endsWith("SHOULDER")){
-                pastRet["shoulder"] = ( pastRet["shoulder"]=== null || pastRet["shoulder"] > pastScore[k]) ? pastScore[k] : pastRet["shoulder"];
+                pastRet["shoulder"] = ( pastRet["shoulder"]=== null || pastRet["shoulder"] < pastScore[k]) ? pastScore[k] : pastRet["shoulder"];
                 return;
             } else if (k.endsWith("ELBOW")) {
-                pastRet["elbow"] = ( pastRet["elbow"]=== null || pastRet["elbow"] > pastScore[k]) ? pastScore[k] : pastRet["elbow"];
+                pastRet["elbow"] = ( pastRet["elbow"]=== null || pastRet["elbow"] < pastScore[k]) ? pastScore[k] : pastRet["elbow"];
                 return;
             } else if (k.endsWith("WRIST")){
                 let tmp = "wrist";
-                pastRet[tmp] = ( pastRet[tmp]=== null || pastRet[tmp] > pastScore[k]) ? pastScore[k] : pastRet[tmp];
+                pastRet[tmp] = ( pastRet[tmp]=== null || pastRet[tmp] < pastScore[k]) ? pastScore[k] : pastRet[tmp];
                 return;
             } else if(k.endsWith("HIP")){
                 let tmp = "hip";
-                pastRet[tmp] = ( pastRet[tmp]=== null || pastRet[tmp] > pastScore[k]) ? pastScore[k] : pastRet[tmp];
+                pastRet[tmp] = ( pastRet[tmp]=== null || pastRet[tmp] < pastScore[k]) ? pastScore[k] : pastRet[tmp];
                 return;
             } else if(k.endsWith("KNEE")){
                 let tmp = "knee";
-                pastRet[tmp] = ( pastRet[tmp]=== null || pastRet[tmp] > pastScore[k]) ? pastScore[k] : pastRet[tmp];
+                pastRet[tmp] = ( pastRet[tmp]=== null || pastRet[tmp] < pastScore[k]) ? pastScore[k] : pastRet[tmp];
                 return;
             } else if(k.endsWith("ANKLE")) {
                 let tmp = "ankle";
-                pastRet[tmp] = ( pastRet[tmp]=== null || pastRet[tmp] > pastScore[k]) ? pastScore[k] : pastRet[tmp];
+                pastRet[tmp] = ( pastRet[tmp]=== null || pastRet[tmp] < pastScore[k]) ? pastScore[k] : pastRet[tmp];
                 return;
             }
         }  );  
         
-        data.datasets[0]["data"] = Object.values(pastRet);
-        data.datasets[1]["data"] = Object.values(currentRet);
+        data.datasets[0]["data"] = Object.values(pastRet).forEach(element=>this.computeScore(element));
+        data.datasets[1]["data"] = Object.values(currentRet).forEach(element=>this.computeScore(element));
     }
 
     render() {

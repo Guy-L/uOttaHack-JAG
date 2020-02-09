@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import {ReactComponent as BodySvg} from '../Assets/body-part.svg'
-
+import BodyParts from '../Components/BodyParts'
 // Here we should update BodyParts also!!
 
 export default class PoseScore extends React.Component {
@@ -14,8 +14,8 @@ export default class PoseScore extends React.Component {
     }
   
     componentDidMount() {
-      axios.get(`http://jagtmove.herokuapp.com/results`, {
-        headers: {'Acess-Control-Allow-Origin': '*'},
+      setInterval(()=>{axios.get(`http://jagtmove.herokuapp.com/result`, {
+        headers: {'Access-Control-Allow-Origin': '*'},
         proxy: {
           host:'http://jagtmove.herokuapp.com/'
         }
@@ -26,16 +26,16 @@ export default class PoseScore extends React.Component {
           const pastData = dataJson[dataJson.length-2].result;
           localStorage.setItem('data', JSON.stringify(recentData));
           localStorage.setItem('pastData', JSON.stringify(pastData));
+          console.log("Rdata", recentData);
         })
         .catch(error => {
           console.log(error)
-        })
+        })}, 1000)
     }
   
     render() {
       return (
-        <ul>
-        </ul>
+        <BodyParts/>
       );
     }
   }
