@@ -34,11 +34,36 @@ const Input = styled.input`
   }
 `;
 
+const data = {
+  labels: ['Eating', 'Drinking', 'Sleeping', 'Designing', 'Coding', 'Cycling', 'Running'],
+  datasets: [
+    {
+      label: 'My First dataset',
+      backgroundColor: 'rgba(179,181,198,0.2)',
+      borderColor: 'rgba(179,181,198,1)',
+      pointBackgroundColor: 'rgba(179,181,198,1)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(179,181,198,1)',
+      data: [65, 59, 90, 81, 56, 55, 40]
+    },
+    {
+      label: 'My Second dataset',
+      backgroundColor: 'rgba(255,99,132,0.2)',
+      borderColor: 'rgba(255,99,132,1)',
+      pointBackgroundColor: 'rgba(255,99,132,1)',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: 'rgba(255,99,132,1)',
+      data: [28, 48, 40, 19, 96, 27, 100]
+    }
+  ]
+};
 
 export default ()=> (
   <ThemeProvider theme={Theme}>
     <Navbar color="light" light id="navigation-bar">
-      <Navbar.Brand href="#home" id="brand" >
+      <Navbar.Brand href="#home" id="brand">
         <img src="https://img.icons8.com/color/48/000000/sports-mode.png"></img>
         JagtMove Analytics
       </Navbar.Brand>
@@ -53,10 +78,12 @@ export default ()=> (
 
     <div id="content">
       <Card>
-        <BodySvg/>
+        <Card.Header>"Patient Natalie's Pose Score"</Card.Header>
+        <BodySvg></BodySvg>
+
       </Card>
       <Card>
-        <Radar>
+        <Radar data={data}>
         </Radar>
       </Card>
     </div>
