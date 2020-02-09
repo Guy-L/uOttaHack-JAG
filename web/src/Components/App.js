@@ -79,7 +79,7 @@ export default ()=> (
               <CardHeader>Natalie's Pose Score
               </CardHeader>
               <CardBody>
-                <BodySvg></BodySvg>
+                <BodyParts/>
               </CardBody>
             </Col>
             <Col xs={4} id="bottom-right">
