@@ -1,5 +1,5 @@
 Welcome! It's time to get JAGT!
-<a href=/Guy-L/uOttaHack-JAG/raw/master/release/JAGT%20Move.apk">Click here to get the app!</a>
+["Get the app!"](/Guy-L/uOttaHack-JAG/raw/master/release/JAGT%20Move.apk)
 
 ## Inspiration
 JAGT Move originally came forth as an idea after one of our members injured himself trying to perform a basic exercise move he wasn't used to. The project has pivoted around over time, but the idea of applying new technologies to help people perform poses has remained. 
