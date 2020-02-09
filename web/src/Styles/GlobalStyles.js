@@ -11,11 +11,9 @@ export default createGlobalStyle`
         background-color:${props => props.theme.bgColor};
         color:${props => props.theme.blackColor};
         font-size:14px;
+        margin:auto;
+        padding: auto;
         font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-
-    #content{
-        padding: 40px;
     }
 
     a {
@@ -37,5 +35,21 @@ export default createGlobalStyle`
     #brand{
         font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
         font-style: italic;      
+    }
+
+    .inline {
+        display: inline-block;
+    }
+
+    #summary{
+        position: absolute;
+        float:left;
+    }
+
+    #bottom-right .col-6 {
+        bottom:0; 
+        right:0;
+        margin: auto;
+        padding-bottom:0 !important;  
     }
 `;

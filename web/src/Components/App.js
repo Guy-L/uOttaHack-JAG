@@ -4,10 +4,10 @@ import Theme from "../Styles/Theme";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar, Form, FormControl, Button} from 'react-bootstrap';
 import {ReactComponent as BodySvg} from '../Assets/body-part.svg'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import React, { useState, useRef, useEffect } from "react";
 import {Radar} from 'react-chartjs-2';
-import { Card} from 'reactstrap';
+import { Card,CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, CardHeader, Container, Row, Col } from 'reactstrap';
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -74,18 +74,23 @@ export default ()=> (
         </Navbar.Text>
       </Navbar.Collapse>
     </Navbar>
-    <br/>
-
-    <div id="content">
-      <Card>
-        <Card.Header>"Patient Natalie's Pose Score"</Card.Header>
-        <BodySvg></BodySvg>
-
-      </Card>
-      <Card>
-        <Radar data={data}>
-        </Radar>
-      </Card>
-    </div>
+        <Row id="content">
+            <Col xs={8}>
+              <CardHeader>Natalie's Pose Score
+              </CardHeader>
+              <CardBody>
+                <BodySvg></BodySvg>
+              </CardBody>
+            </Col>
+            <Col xs={4} id="bottom-right">
+              <Row>
+                <div></div>
+                </Row>
+                <Row>
+                  <Radar data={data} padding={0} margin={0} id="summary">
+                  </Radar>
+                </Row>     
+            </Col>
+        </Row>
   </ThemeProvider>
 );
