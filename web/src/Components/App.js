@@ -27,8 +27,9 @@ export default ()=> (
     <>
     <Navbar color="light" id="navigation-bar">
       <Navbar.Brand href="#home" id="brand">
-        <img src={JagtText} style={{width:400, padding:5, marginLeft:-25}} />
+        <img src={JagtText} style={{width:400, padding:5, marginLeft:-20, marginRight:-60}} />         
       </Navbar.Brand>
+      <PoundingCircle/>
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
         <Navbar.Text>
@@ -74,7 +75,6 @@ export default ()=> (
               </Row>
             </Col>
         </Row>
-        <PoundingCircle/>
         </>
         </>
   </ThemeProvider>

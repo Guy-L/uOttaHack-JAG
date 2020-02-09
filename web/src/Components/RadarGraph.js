@@ -37,11 +37,11 @@ class RadarGraph extends React.Component {
     computeScore(error){
         console.log("ERROR GOT", error)
         let ret = 0;
-        if (60<= error) { ret = 0 }
-        else { ret = 1-(error/60) }
+        if (100<= error) { ret = 0 }
+        else { ret = 1-(error/100) }
         console.log("SCORE IS GOT", error)
 
-        return ret;
+        return (ret*100) .toFixed(4);
     }
 
     componentDidMount() {

@@ -5,8 +5,8 @@ import styled, {keyframes} from 'styled-components'
 
 
 const Container = styled.div`
-      width: 200px;
-      height: 200px;
+      width: 50px;
+      height: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -28,8 +28,8 @@ const CircleAnimation = keyframes`
 const Circle1 = styled.div`
   border-radius: 50%;
   background-color: red;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   opacity: 0;
   animation: ${CircleAnimation} 4s infinite cubic-bezier(.36, .11, .89, .32);
@@ -38,8 +38,8 @@ const Circle1 = styled.div`
 const Circle2 = styled.div`
   border-radius: 50%;
   background-color: red;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   opacity: 0;
   animation: ${CircleAnimation} 4s infinite cubic-bezier(.36, .11, .89, .32);
@@ -48,8 +48,8 @@ const Circle2 = styled.div`
 const Circle3 = styled.div`
   border-radius: 50%;
   background-color: red;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   opacity: 0;
   animation: ${CircleAnimation} 4s infinite cubic-bezier(.36, .11, .89, .32);
@@ -59,8 +59,8 @@ const Circle3 = styled.div`
 const Circle4 = styled.div`
   border-radius: 50%;
   background-color: red;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   opacity: 0;
   animation: ${CircleAnimation} 4s infinite cubic-bezier(.36, .11, .89, .32);
@@ -70,7 +70,7 @@ class PoundingCircle extends React.Component {
 
     render() {
         return (
-            <Container>
+            <Container inline>
                 <Circle1></Circle1>
                 <Circle2></Circle2>
                 <Circle3> </Circle3>

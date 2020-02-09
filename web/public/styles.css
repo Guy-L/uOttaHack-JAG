@@ -1,0 +1,14 @@
+@keyframes poundingCircleAnimation {
+    from {
+        transform: scale(.5, .5);
+        opacity: .5;
+    }
+    to {
+        transform: scale(2.5, 2.5);
+        opacity: 0;
+    }
+}
+
+radialGradient {
+    animation: poundingCircleAnimation 4s infinite cubic-bezier(.36, .11, .89, .32);
+}
