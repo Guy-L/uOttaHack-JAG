@@ -21,179 +21,243 @@
       <feBlend in="SourceGraphic" in2="bg"/>
     </filter>
     <mask id="mask" x="491.13" y="48.63" width="77.73" height="77.73" maskUnits="userSpaceOnUse">
-      <circle cx="530" cy="87.5" r="38.87" fill="url(#radial-gradient)" filter="url(#luminosity-noclip)"/>
+      <g filter="url(#luminosity-noclip)">
+        <g transform="translate(0 0)">
+          <circle cx="530" cy="87.5" r="38.87" fill="url(#radial-gradient)"/>
+        </g>
+      </g>
     </mask>
     <filter id="luminosity-noclip-2" x="388.49" y="112.99" width="107.03" height="107.03" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-color="#fff" result="bg"/>
       <feBlend in="SourceGraphic" in2="bg"/>
     </filter>
     <mask id="mask-2" x="388.49" y="112.99" width="107.03" height="107.03" maskUnits="userSpaceOnUse">
-      <circle cx="442" cy="166.5" r="53.51" fill="url(#radial-gradient-2)" filter="url(#luminosity-noclip-2)"/>
+      <g filter="url(#luminosity-noclip-2)">
+        <g transform="translate(0 0)">
+          <circle cx="442" cy="166.5" r="53.51" fill="url(#radial-gradient-2)"/>
+        </g>
+      </g>
     </mask>
     <filter id="luminosity-noclip-3" x="368.49" y="248.99" width="107.03" height="107.03" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-color="#fff" result="bg"/>
       <feBlend in="SourceGraphic" in2="bg"/>
     </filter>
     <mask id="mask-3" x="368.49" y="248.99" width="107.03" height="107.03" maskUnits="userSpaceOnUse">
-      <circle cx="422" cy="302.5" r="53.51" fill="url(#radial-gradient-6)" filter="url(#luminosity-noclip-3)"/>
+      <g filter="url(#luminosity-noclip-3)">
+        <g transform="translate(0 0)">
+          <circle cx="422" cy="302.5" r="53.51" fill="url(#radial-gradient-6)"/>
+        </g>
+      </g>
     </mask>
     <filter id="luminosity-noclip-4" x="333.49" y="349.99" width="107.03" height="107.03" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-color="#fff" result="bg"/>
       <feBlend in="SourceGraphic" in2="bg"/>
     </filter>
     <mask id="mask-4" x="333.49" y="349.99" width="107.03" height="107.03" maskUnits="userSpaceOnUse">
-      <circle cx="387" cy="403.5" r="53.51" fill="url(#radial-gradient-7)" filter="url(#luminosity-noclip-4)"/>
+      <g filter="url(#luminosity-noclip-4)">
+        <g transform="translate(0 0)">
+          <circle cx="387" cy="403.5" r="53.51" fill="url(#radial-gradient-7)"/>
+        </g>
+      </g>
     </mask>
     <filter id="luminosity-noclip-5" x="436.49" y="358.99" width="107.03" height="107.03" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-color="#fff" result="bg"/>
       <feBlend in="SourceGraphic" in2="bg"/>
     </filter>
     <mask id="mask-5" x="436.49" y="358.99" width="107.03" height="107.03" maskUnits="userSpaceOnUse">
-      <circle cx="490" cy="412.5" r="53.51" fill="url(#radial-gradient-8)" filter="url(#luminosity-noclip-5)"/>
+      <g filter="url(#luminosity-noclip-5)">
+        <g transform="translate(0 0)">
+          <circle cx="490" cy="412.5" r="53.51" fill="url(#radial-gradient-8)"/>
+        </g>
+      </g>
     </mask>
     <filter id="luminosity-noclip-6" x="430.49" y="521.99" width="107.03" height="107.03" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-color="#fff" result="bg"/>
       <feBlend in="SourceGraphic" in2="bg"/>
     </filter>
     <mask id="mask-6" x="430.49" y="521.99" width="107.03" height="107.03" maskUnits="userSpaceOnUse">
-      <circle cx="484" cy="575.5" r="53.51" fill="url(#radial-gradient-9)" filter="url(#luminosity-noclip-6)"/>
+      <g filter="url(#luminosity-noclip-6)">
+        <g transform="translate(0 0)">
+          <circle cx="484" cy="575.5" r="53.51" fill="url(#radial-gradient-9)"/>
+        </g>
+      </g>
     </mask>
     <filter id="luminosity-noclip-7" x="421.49" y="696.99" width="107.03" height="107.03" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-color="#fff" result="bg"/>
       <feBlend in="SourceGraphic" in2="bg"/>
     </filter>
     <mask id="mask-7" x="421.49" y="696.99" width="107.03" height="107.03" maskUnits="userSpaceOnUse">
-      <circle cx="475" cy="750.5" r="53.51" fill="url(#radial-gradient-10)" filter="url(#luminosity-noclip-7)"/>
+      <g filter="url(#luminosity-noclip-7)">
+        <g transform="translate(0 0)">
+          <circle cx="475" cy="750.5" r="53.51" fill="url(#radial-gradient-10)"/>
+        </g>
+      </g>
     </mask>
     <filter id="luminosity-noclip-8" x="561.99" y="112.99" width="107.03" height="107.03" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-color="#fff" result="bg"/>
       <feBlend in="SourceGraphic" in2="bg"/>
     </filter>
     <mask id="mask-8" x="561.99" y="112.99" width="107.03" height="107.03" maskUnits="userSpaceOnUse">
-      <circle cx="615.5" cy="166.5" r="53.51" fill="url(#radial-gradient-11)" filter="url(#luminosity-noclip-8)"/>
+      <g filter="url(#luminosity-noclip-8)">
+        <g transform="translate(0 0)">
+          <circle cx="615.5" cy="166.5" r="53.51" fill="url(#radial-gradient-11)"/>
+        </g>
+      </g>
     </mask>
     <filter id="luminosity-noclip-9" x="581.99" y="248.99" width="107.03" height="107.03" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-color="#fff" result="bg"/>
       <feBlend in="SourceGraphic" in2="bg"/>
     </filter>
     <mask id="mask-9" x="581.99" y="248.99" width="107.03" height="107.03" maskUnits="userSpaceOnUse">
-      <circle cx="635.5" cy="302.5" r="53.51" fill="url(#radial-gradient-12)" filter="url(#luminosity-noclip-9)"/>
+      <g filter="url(#luminosity-noclip-9)">
+        <g transform="translate(0 0)">
+          <circle cx="635.5" cy="302.5" r="53.51" fill="url(#radial-gradient-12)"/>
+        </g>
+      </g>
     </mask>
     <filter id="luminosity-noclip-10" x="616.99" y="349.99" width="107.03" height="107.03" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-color="#fff" result="bg"/>
       <feBlend in="SourceGraphic" in2="bg"/>
     </filter>
     <mask id="mask-10" x="616.99" y="349.99" width="107.03" height="107.03" maskUnits="userSpaceOnUse">
-      <circle cx="670.5" cy="403.5" r="53.51" fill="url(#radial-gradient-13)" filter="url(#luminosity-noclip-10)"/>
+      <g filter="url(#luminosity-noclip-10)">
+        <g transform="translate(0 0)">
+          <circle cx="670.5" cy="403.5" r="53.51" fill="url(#radial-gradient-13)"/>
+        </g>
+      </g>
     </mask>
     <filter id="luminosity-noclip-11" x="513.99" y="358.99" width="107.03" height="107.03" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-color="#fff" result="bg"/>
       <feBlend in="SourceGraphic" in2="bg"/>
     </filter>
     <mask id="mask-11" x="513.99" y="358.99" width="107.03" height="107.03" maskUnits="userSpaceOnUse">
-      <circle cx="567.5" cy="412.5" r="53.51" fill="url(#radial-gradient-3)" filter="url(#luminosity-noclip-11)"/>
+      <g filter="url(#luminosity-noclip-11)">
+        <g transform="translate(0 0)">
+          <circle cx="567.5" cy="412.5" r="53.51" fill="url(#radial-gradient-3)"/>
+        </g>
+      </g>
     </mask>
     <filter id="luminosity-noclip-12" x="519.99" y="521.99" width="107.03" height="107.03" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-color="#fff" result="bg"/>
       <feBlend in="SourceGraphic" in2="bg"/>
     </filter>
     <mask id="mask-12" x="519.99" y="521.99" width="107.03" height="107.03" maskUnits="userSpaceOnUse">
-      <circle cx="573.5" cy="575.5" r="53.51" fill="url(#radial-gradient-4)" filter="url(#luminosity-noclip-12)"/>
+      <g filter="url(#luminosity-noclip-12)">
+        <g transform="translate(0 0)">
+          <circle cx="573.5" cy="575.5" r="53.51" fill="url(#radial-gradient-4)"/>
+        </g>
+      </g>
     </mask>
     <filter id="luminosity-noclip-13" x="528.99" y="696.99" width="107.03" height="107.03" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feFlood flood-color="#fff" result="bg"/>
       <feBlend in="SourceGraphic" in2="bg"/>
     </filter>
     <mask id="mask-13" x="528.99" y="696.99" width="107.03" height="107.03" maskUnits="userSpaceOnUse">
-      <circle cx="582.5" cy="750.5" r="53.51" fill="url(#radial-gradient-5)" filter="url(#luminosity-noclip-13)"/>
+      <g filter="url(#luminosity-noclip-13)">
+        <g transform="translate(0 0)">
+          <circle cx="582.5" cy="750.5" r="53.51" fill="url(#radial-gradient-5)"/>
+        </g>
+      </g>
     </mask>
   </defs>
-  <title>body-trace</title>
+  <title>body-part</title>
   <g id="reference">
-    <image width="512" height="512" transform="translate(117.5) scale(1.61)" xlink:href="http://localhost:3000/human.png"/>
+    <image width="512" height="512" transform="translate(117.5 0) scale(1.61)" xlink:href="human.png"/>
   </g>
   <g id="Layer_2" data-name="Layer 2">
-    <line id="top-left-display-bar" x1="302" y1="52.5" y2="52.5" fill="none" stroke="#000" stroke-miterlimit="10"/>
-    <line id="bottom-left-display-bar" y1="650.5" x2="302" y2="650.5" fill="none" stroke="#000" stroke-miterlimit="10"/>
+    <g id="top-right-display-bar">
+      <text transform="translate(926.92 43.59)" font-size="23" font-family="MyriadPro-Regular, Myriad Pro"><tspan letter-spacing="-0.01em">L</tspan><tspan x="10.53" y="0">o</tspan><tspan x="23.16" y="0" letter-spacing="-0.01em">r</tspan><tspan x="30.45" y="0">em ipsum</tspan></text>
+      <line id="top-right-display-bar-2" data-name="top-right-display-bar" x1="755.5" y1="52.5" x2="1057.5" y2="52.5" fill="none" stroke="#000" stroke-miterlimit="10"/>
+    </g>
     <g id="nose">
       <g mask="url(#mask)">
-        <circle id="nose-2" data-name="nose" cx="530" cy="87.5" r="34.5" fill="red"/>
+        <circle id="nose-2" data-name="nose" cx="530" cy="87.5" r="34.5" fill="red" stroke="#000" stroke-miterlimit="10"/>
       </g>
-      <line id="line" x1="483.5" y1="80" x2="301.5" y2="53"/>
+      <line id="line" x1="483.5" y1="80" x2="301.5" y2="53" stroke="#000" stroke-miterlimit="10"/>
     </g>
     <g id="left-shoulder">
       <g mask="url(#mask-2)">
-        <circle id="left-shoulder-2" data-name="left-shoulder" cx="442" cy="166.5" r="47.5" fill="red"/>
+        <circle id="left-shoulder-2" data-name="left-shoulder" cx="442" cy="166.5" r="47.5" fill="red" stroke="#000" stroke-miterlimit="10"/>
       </g>
-      <line x1="408.59" y1="132.75" x2="301.5" y2="53"/>
+      <line x1="408.59" y1="132.75" x2="301.5" y2="53" stroke="#000" stroke-miterlimit="10"/>
     </g>
     <g id="left-elbow">
       <g mask="url(#mask-3)">
-        <circle id="left-elbow-2" data-name="left-elbow" cx="422" cy="302.5" r="47.5" fill="red"/>
+        <circle id="left-elbow-2" data-name="left-elbow" cx="422" cy="302.5" r="47.5" fill="red" stroke="#000" stroke-miterlimit="10"/>
       </g>
-      <line x1="301.5" y1="53" x2="395.61" y2="263"/>
+      <line x1="301.5" y1="53" x2="395.61" y2="263" stroke="#000" stroke-miterlimit="10"/>
     </g>
     <g id="left-wrist">
       <g mask="url(#mask-4)">
-        <circle id="left-wrist-2" data-name="left-wrist" cx="387" cy="403.5" r="47.5" fill="red"/>
+        <circle id="left-wrist-2" data-name="left-wrist" cx="387" cy="403.5" r="47.5" fill="red" stroke="#000" stroke-miterlimit="10"/>
       </g>
-      <line x1="301.5" y1="53" x2="364.5" y2="371"/>
+      <line x1="301.5" y1="53" x2="364.5" y2="371" stroke="#000" stroke-miterlimit="10"/>
     </g>
     <g id="left-hip">
       <g mask="url(#mask-5)">
-        <circle id="left-hip-2" data-name="left-hip" cx="490" cy="412.5" r="47.5" fill="red"/>
+        <circle id="left-hip-2" data-name="left-hip" cx="490" cy="412.5" r="47.5" fill="red" stroke="#000" stroke-miterlimit="10"/>
       </g>
-      <line x1="449.22" y1="436.87" x2="301.5" y2="650"/>
+      <line x1="449.22" y1="436.87" x2="301.5" y2="650" stroke="#000" stroke-miterlimit="10"/>
     </g>
     <g id="left-knee">
       <g mask="url(#mask-6)">
-        <circle id="left-knee-2" data-name="left-knee" cx="484" cy="575.5" r="47.5" fill="red"/>
+        <circle id="left-knee-2" data-name="left-knee" cx="484" cy="575.5" r="47.5" fill="red" stroke="#000" stroke-miterlimit="10"/>
       </g>
-      <line x1="301.5" y1="650" x2="442.5" y2="586.45"/>
+      <line x1="301.5" y1="650" x2="442.5" y2="586.45" stroke="#000" stroke-miterlimit="10"/>
     </g>
     <g id="left-ankle">
       <g mask="url(#mask-7)">
-        <circle id="left-ankle-2" data-name="left-ankle" cx="475" cy="750.5" r="47.5" fill="red"/>
+        <circle id="left-ankle-2" data-name="left-ankle" cx="475" cy="750.5" r="47.5" fill="red" stroke="#000" stroke-miterlimit="10"/>
       </g>
-      <line x1="301.5" y1="650" x2="434.5" y2="725.67"/>
+      <line x1="301.5" y1="650" x2="434.5" y2="725.67" stroke="#000" stroke-miterlimit="10"/>
     </g>
-    <line id="top-right-display-bar" x1="755.5" y1="52.5" x2="1057.5" y2="52.5" fill="none" stroke="#000" stroke-miterlimit="10"/>
-    <line id="bottom-right-display-bar" x1="1057.5" y1="650.5" x2="755.5" y2="650.5" fill="none" stroke="#000" stroke-miterlimit="10"/>
+    <g id="bottom-right-display-bar">
+      <text transform="translate(926.92 639.59)" font-size="23" font-family="MyriadPro-Regular, Myriad Pro"><tspan letter-spacing="-0.01em">L</tspan><tspan x="10.53" y="0">o</tspan><tspan x="23.16" y="0" letter-spacing="-0.01em">r</tspan><tspan x="30.45" y="0">em ipsum</tspan></text>
+      <line id="bottom-right-display-bar-2" data-name="bottom-right-display-bar" x1="1057.5" y1="650.5" x2="755.5" y2="650.5" fill="none" stroke="#000" stroke-miterlimit="10"/>
+    </g>
     <g id="right-shoulder">
       <g mask="url(#mask-8)">
-        <circle id="left-shoulder-3" data-name="left-shoulder" cx="615.5" cy="166.5" r="47.5" fill="red"/>
+        <circle id="left-shoulder-3" data-name="left-shoulder" cx="615.5" cy="166.5" r="47.5" fill="red" stroke="#000" stroke-miterlimit="10"/>
       </g>
-      <line x1="648.91" y1="132.75" x2="756" y2="53"/>
+      <line x1="648.91" y1="132.75" x2="756" y2="53" stroke="#000" stroke-miterlimit="10"/>
     </g>
     <g id="right-elbow">
       <g mask="url(#mask-9)">
-        <circle id="left-elbow-3" data-name="left-elbow" cx="635.5" cy="302.5" r="47.5" fill="red"/>
+        <circle id="left-elbow-3" data-name="left-elbow" cx="635.5" cy="302.5" r="47.5" fill="red" stroke="#000" stroke-miterlimit="10"/>
       </g>
-      <line x1="756" y1="53" x2="661.89" y2="263"/>
+      <line x1="756" y1="53" x2="661.89" y2="263" stroke="#000" stroke-miterlimit="10"/>
     </g>
     <g id="right-wrist">
       <g mask="url(#mask-10)">
-        <circle id="left-wrist-3" data-name="left-wrist" cx="670.5" cy="403.5" r="47.5" fill="red"/>
+        <circle id="left-wrist-3" data-name="left-wrist" cx="670.5" cy="403.5" r="47.5" fill="red" stroke="#000" stroke-miterlimit="10"/>
       </g>
-      <line x1="756" y1="53" x2="693" y2="371"/>
+      <line x1="756" y1="53" x2="693" y2="371" stroke="#000" stroke-miterlimit="10"/>
     </g>
     <g id="right-hip">
       <g mask="url(#mask-11)">
-        <circle id="left-hip-3" data-name="left-hip" cx="567.5" cy="412.5" r="47.5" fill="red"/>
+        <circle id="left-hip-3" data-name="left-hip" cx="567.5" cy="412.5" r="47.5" fill="red" stroke="#000" stroke-miterlimit="10"/>
       </g>
-      <line x1="608.28" y1="436.87" x2="756" y2="650"/>
+      <line x1="608.28" y1="436.87" x2="756" y2="650" stroke="#000" stroke-miterlimit="10"/>
     </g>
     <g id="right-knee">
       <g mask="url(#mask-12)">
-        <circle id="left-knee-3" data-name="left-knee" cx="573.5" cy="575.5" r="47.5" fill="red"/>
+        <circle id="left-knee-3" data-name="left-knee" cx="573.5" cy="575.5" r="47.5" fill="red" stroke="#000" stroke-miterlimit="10"/>
       </g>
-      <line x1="756" y1="650" x2="615" y2="586.45"/>
+      <line x1="756" y1="650" x2="615" y2="586.45" stroke="#000" stroke-miterlimit="10"/>
     </g>
     <g id="right-ankle">
       <g mask="url(#mask-13)">
-        <circle id="left-ankle-3" data-name="left-ankle" cx="582.5" cy="750.5" r="47.5" fill="red"/>
+        <circle id="left-ankle-3" data-name="left-ankle" cx="582.5" cy="750.5" r="47.5" fill="red" stroke="#000" stroke-miterlimit="10"/>
       </g>
-      <line x1="756" y1="650" x2="623" y2="725.67"/>
+      <line x1="756" y1="650" x2="623" y2="725.67" stroke="#000" stroke-miterlimit="10"/>
+    </g>
+    <g id="top-left-display-bar">
+      <line id="top-left-display-bar-2" data-name="top-left-display-bar" x1="302" y1="52.5" y2="52.5" fill="none" stroke="#000" stroke-miterlimit="10"/>
+      <text transform="translate(11.92 43.3)" font-size="23" font-family="MyriadPro-Regular, Myriad Pro"><tspan letter-spacing="-0.01em">L</tspan><tspan x="10.53" y="0">o</tspan><tspan x="23.16" y="0" letter-spacing="-0.01em">r</tspan><tspan x="30.45" y="0">em ipsum</tspan></text>
+    </g>
+    <g id="bottom-left-display-bar">
+      <line id="bottom-left-display-bar-2" data-name="bottom-left-display-bar" y1="650.5" x2="302" y2="650.5" fill="none" stroke="#000" stroke-miterlimit="10"/>
+      <text transform="translate(11.92 639.59)" font-size="23" font-family="MyriadPro-Regular, Myriad Pro"><tspan letter-spacing="-0.01em">L</tspan><tspan x="10.53" y="0">o</tspan><tspan x="23.16" y="0" letter-spacing="-0.01em">r</tspan><tspan x="30.45" y="0">em ipsum</tspan></text>
     </g>
   </g>
 </svg>
